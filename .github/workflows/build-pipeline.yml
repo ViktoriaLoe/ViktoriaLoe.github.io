@@ -26,7 +26,7 @@ jobs:
       - name: Run styles lint and format check
         run: npm run lint:css
       - name: Hallo
-        run: echo "Hello $name"
+        run: echo "Hello $name your password is ${{secrets.PASSWORD}}"
         env:
           name: Viktoria
     
