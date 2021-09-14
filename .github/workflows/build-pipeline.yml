@@ -15,6 +15,12 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14.x'
+        # Task 7
+      - name: Profile Readme Development Stats
+        uses: anmol098/waka-readme-stats@V3
+        with:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
       - name: Install dependencies
         run: npm ci
       
@@ -29,6 +35,8 @@ jobs:
         run: echo "Hello $name your password is ${{secrets.PASSWORD}}"
         env:
           name: Viktoria
+
+
     
   
   deploy:
